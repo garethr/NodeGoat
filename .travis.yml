@@ -4,6 +4,7 @@ node_js:
 services:
   - mongodb
 before_script:
-  - mongo nodegoat nodegoat_db_reset.js
+  - sleep 5
+  - mongo < nodegoat_db_reset.js
 script:
   - grunt test
