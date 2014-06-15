@@ -4,5 +4,9 @@ node_js:
 services:
   - mongodb
 before_script:
-  - sleep 5
+  - npm install nsp --save
+  - npm shrinkrap
   - mongo < nodegoat_db_reset.js
+script:
+  - nsp shrinkwrap
+
